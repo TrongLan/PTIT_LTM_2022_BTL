@@ -1,0 +1,44 @@
+
+g	java:S112@"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¬­È¼¼0
+g	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8­­È¼¼0
+E
+java:S1066^"/Merge this if statement with the enclosing one.(…œºà
+E
+java:S1066s"/Merge this if statement with the enclosing one.(¾Çß
+E
+java:S16049"(Make this anonymous inner class a lambda(ÉãÃ®8±­È¼¼0
+?
+java:S1604¨"(Make this anonymous inner class a lambda(’åš‰
+b
+java:S1301²"KReplace this "switch" statement by "if" statements to increase readability.(Ñ¢³Ö
+D
+java:S2189B""Add an end condition to this loop.(˜ïˆžÿÿÿÿÿ8ï¶È¼¼0
+N
+java:S2589Ë"7Remove this expression which always evaluates to "true"(ñö§¿
+N
+java:S2589ˆ"7Remove this expression which always evaluates to "true"(ß »§
+k	java:S116#"VRename this field "AddressText" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÇÐŒ
+w
+java:S1450#"ZRemove the "AddressText" field and declare it as a local variable in the relevant methods.(‡ÇÐŒ8ÖƒÉ¼¼0
+{
+java:S2142?"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8¾·È¼¼0
+{
+java:S2142P"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ã·È¼¼0
+e
+java:S1874Z"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶þÿÿÿÿ
+_
+java:S1874o"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
+r
+java:S3252{"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(Ç·ÅÂýÿÿÿÿ
+U
+java:S1155ˆ">Use isEmpty() to check whether the collection is empty or not.(ß »§
+Y	java:S125Ž"<This block of commented-out lines of code should be removed.(ô¼ÿä8Ë°¦´¼0
+S
+java:S1854­"<Remove this useless assignment to local variable "response".(­¯ÝØ
+D
+java:S1481­"-Remove this unused "response" local variable.(­¯ÝØ
+8	java:S131²""Add a default case to this switch.(Ñ¢³Ö
+ƒ
+java:S3252³"gUse static access with "com.google.android.gms.common.api.CommonStatusCodes" for "RESOLUTION_REQUIRED".(Âþ†²ûÿÿÿÿ
+L
+java:S1068#"/Remove this unused "AddressText" private field.(‡ÇÐŒ8Þ‡É¼¼0
