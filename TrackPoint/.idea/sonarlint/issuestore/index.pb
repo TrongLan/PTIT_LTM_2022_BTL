@@ -1,8 +1,10 @@
 
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-j
-:app/src/main/java/com/example/trackpoint/RunOnStartUp.java,1\5\15e6be12e3ad979810a6b942e17f9be8bbe06e77
+f
+6app/src/main/java/com/example/trackpoint/Constant.java,f\a\fa52f56e45ce8af3b5f790838deaea82778bb880
+w
+Gapp/src/main/java/com/example/trackpoint/ForegroundLocationService.java,6\1\6181878f408ad8744754b35480ebe161823a7b64
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 j
