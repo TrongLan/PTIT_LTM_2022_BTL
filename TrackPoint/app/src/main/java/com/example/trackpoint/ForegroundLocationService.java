@@ -36,7 +36,7 @@ public class ForegroundLocationService extends Service {
         Log.d("LOCATION_UPDATE", latitude + ", " + longitude);
         new Thread(() -> {
           try {
-            Socket socket = new Socket("192.168.1.16", 2810);
+            Socket socket = new Socket("192.168.6.38", 2810);
             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
             outputStream.writeUTF(geocode);
             outputStream.close();

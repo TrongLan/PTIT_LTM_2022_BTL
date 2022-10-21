@@ -5,31 +5,66 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import com.google.android.gms.location.*;
 
 public class MainActivity extends AppCompatActivity {
+
+  private TextView trackingServiceStatus;
+  private TextView ipInput;
+  private Button serviceEnable;
+  private Button serviceUnenable;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    trackingServiceStatus = (TextView) findViewById(R.id.trackingServiceStatus);
+    ipInput = (TextView) findViewById(R.id.ipInput);
+    serviceEnable = (Button) findViewById(R.id.enableTrackingService);
+    serviceUnenable = (Button) findViewById(R.id.unenableTrackingService);
+    serviceUnenable.setBackgroundColor(Color.RED);
+    serviceEnable.setBackgroundColor(Color.GREEN);
     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-      if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+      if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+        trackingServiceStatus.setText("Service is enabled");
+        serviceEnable.setBackgroundColor(Color.GRAY);
         startLocationService();
+      }
+
       else
         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
     }
   }
 
   public void turnOffServiceBtn(View view){
+    trackingServiceStatus.setText("Service is unenabled");
+    trackingServiceStatus.setTextColor(Color.RED);
+    serviceUnenable.setBackgroundColor(Color.GRAY);
+    serviceEnable.setBackgroundColor(Color.GREEN);
     stopLocationService();
+  }
+
+  public void turnOnServiceBtn(View view){
+    if(!isLocationServiceRunning()){
+      trackingServiceStatus.setText("Service is enabled");
+      trackingServiceStatus.setTextColor(Color.GREEN);
+      serviceEnable.setBackgroundColor(Color.GRAY);
+      serviceUnenable.setBackgroundColor(Color.RED);
+      startLocationService();
+    }
+  }
+
+  public void serverConnectClick(View view){
+    String ipAddress = (String) ipInput.getText();
   }
 
   private boolean isLocationServiceRunning() {
